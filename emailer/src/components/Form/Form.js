@@ -8,17 +8,17 @@ function Form(props) {
                 <hr />
                 <form>
                     <label>First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="tu nombre, hombre" />
+                    <input type="text" id="fname" name="fname" placeholder="tu nombre, hombre" onChange={props.changeHandler}/>
                     <label>Last Name</label>
-                    <input type="text" id="fname" name="lastname" placeholder="your last name" />
+                    <input type="text" id="lname" name= "lname" placeholder="your last name" onChange={props.changeHandler}/>
                     <label>Email</label>
-                    <input type="text" id="fname" name="firstname" placeholder="your email address por favor" />
+                    <input type="text" id="email" name="email" placeholder="your email address por favor" onChange={props.changeHandler}/>
                     <hr />
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+                    <label >Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." onChange={props.changeHandler}></textarea>
 
                 </form>
-                <button>Submit</button>
+                <button onSubmit={props.handleSubmit}>Submit</button>
             </div>
         </div>
 
